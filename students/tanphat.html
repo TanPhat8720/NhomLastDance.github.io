@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới Thiệu Bản Thân</title>
+  <style>
+      body {
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.6;
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: #333;
+          text-align: center;
+      }
+
+      header {
+          background: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          padding: 20px 0;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s;
+      }
+
+      header.shrink {
+          padding: 10px 0;
+          background: rgba(0, 0, 0, 0.9);
+      }
+
+      header .container-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 80%;
+          margin: auto;
+      }
+
+      header h1 {
+          margin: 0;
+          font-size: 24px;
+          transition: font-size 0.3s;
+      }
+
+      header nav ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+      }
+
+      header nav ul li {
+          margin: 0 15px;
+          background: rgba(0, 0, 0, 0.8);
+      }
+
+      header nav ul li a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 16px;
+          transition: color 0.3s, transform 0.3s;
+      }
+
+      header nav ul li a:hover {
+          color: #77aaff;
+          transform: scale(1.1);
+      }
+
+      .container {
+          width: 60%;
+          margin: 120px auto 50px;
+          background: #fff;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          object-fit: cover;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      ul {
+          list-style-type: none;
+          padding: 0;
+      }
+
+      li {
+          background: rgba(255, 255, 255, 0.8);
+          margin: 10px 0;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s, background 0.3s;
+      }
+
+      li:hover {
+          transform: scale(1.05);
+          background: #ddd;
+      }
+
+      footer {
+          background: #222;
+          color: #fff;
+          text-align: center;
+          padding: 20px 0;
+          margin-top: 30px;
+      }
+  </style>
+</head>
+
+<body>
+  <header>
+      <div class="container-header">
+          <h1>Giới Thiệu Bản Thân</h1>
+          <nav>
+              <ul>
+                  <li><a href="../index.html">Trang Chủ</a></li>
+                  <li><a href="#">Dự Án</a></li>
+                  <li><a href="#">Liên Hệ</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <div class="container">
+      <h1>Giới thiệu bản thân</h1>
+      <img src="../assets/images/tanphat.jpg" alt="Ảnh đại diện">
+      <p><strong>Họ và tên:</strong> Trần Tấn Phát</p>
+      <p><strong>MSSV:</strong> 2180608720</p>
+      <p><strong>Lớp:</strong> 21DTHF2</p>
+      <p><strong>Chuyên ngành:</strong> Công nghệ phần mềm</p>
+      <h2>Dự án đã tham gia</h2>
+      <ul>
+          <li>Hệ thống chấm công bằng vân tay</li>
+          <li>Website bán quần áo</li>
+          <li>Ứng dụng theo dõi sức khỏe</li>
+      </ul>
+  </div>
+  <footer>
+      <p>&copy; 2025 Trần Tấn Phát. All rights reserved.</p>
+  </footer>
+  <script>
+      window.addEventListener('scroll', function () {
+          const header = document.querySelector('header');
+          if (window.scrollY > 50) {
+              header.classList.add('shrink');
+          } else {
+              header.classList.remove('shrink');
+          }
+      });
+  </script>
+</body>
+
+</html>
