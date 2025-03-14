@@ -1,18 +1,181 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới Thiệu Nhóm Last Dance</title>
-    <style href="/style.css"></style>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+
+        header.shrink {
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #77aaff;
+        }
+
+        .showcase {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            background: url('showcase.jpg') no-repeat center/cover;
+            color: #fff;
+            position: relative;
+        }
+
+        .showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .showcase .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .showcase h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .showcase p {
+            font-size: 20px;
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin: 50px auto;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .members.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .member {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .member:hover img {
+            transform: rotate(10deg);
+        }
+
+        .member h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            text-underline-offset: hidden;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
 </head>
+
 <body>
     <header id="main-header">
         <div class="container">
             <h1>Nhóm Last Dance</h1>
             <nav>
                 <ul>
-                    <li><a href="#">Trang Chủ</a></li>
+                    <li><a href="/index.html">Trang Chủ</a></li>
                     <li><a href="#">Giới Thiệu</a></li>
                     <li><a href="#">Liên Hệ</a></li>
                 </ul>
@@ -28,26 +191,53 @@
     </section>
 
     <section class="members" id="members">
-        <div class="member">
+        <a class="member" href="students/vannghia.html" style="text-underline-offset:hidden;">
             <img src="./assets/images/vannghia.jpg" alt="Thành viên 1">
-            <h3>Thành viên 1</h3>
+            <h3>Đậu Văn Nghĩa</h3>
             <p>Vai trò: Trưởng nhóm</p>
-        </div>
-        <div class="member">
+        </a>
+        <a class="member" href="students/tanphat.html" style="text-underline-offset:hidden;">
             <img src="./assets/images/tanphat.jpg" alt="Thành viên 2">
-            <h3>Thành viên 2</h3>
-            <p>Vai trò: Lập trình viên</p>
-        </div>
-        <div class="member">
-            <img src="member3.jpg" alt="Thành viên 3">
-            <h3>Thành viên 3</h3>
+            <h3>Trần Tấn Phát</h3>
+            <p>Vai trò: Lập trình viên Backend</p>
+
+        </a>
+        <a class="member" href="students/tuankiet.html" style="text-underline-offset:hidden;">
+            <img src="tuankiet.jpg" alt="Thành viên 3">
+            <h3>Trần Tuấn Kiệt</h3>
+            <p>Vai trò: Lập trình viên Frontend</p>
+        </a>
+        <a class="member" href="students/giaphu.html" style="text-underline-offset:hidden;">
+            <img src="./assets/images/giaphu.jpg" alt="Thành viên 4">
+            <h3>Đặng Hoàng Gia Phú</h3>
             <p>Vai trò: Thiết kế</p>
-        </div>
+            </div>
+        </a>
     </section>
 
     <footer>
         <p>&copy; 2025 Nhóm Last Dance. All Rights Reserved.</p>
     </footer>
-    <script src="/script.js"></script>
+    <script>window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('shrink');
+            } else {
+                header.classList.remove('shrink');
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const membersSection = document.getElementById("members");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        membersSection.classList.add("visible");
+                    }
+                });
+            });
+            observer.observe(membersSection);
+        }); </script>
 </body>
+
 </html>
